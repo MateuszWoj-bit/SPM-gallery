@@ -1,0 +1,3251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spider-Man – Card Gallery</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f5f5f5; margin: 20px; }
+        h1 { text-align: center; }
+        .gallery { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; }
+        .card {
+            border: 1px solid #ccc;
+            padding: 5px;
+            background: white;
+            text-align: center;
+            width: 223px;
+        }
+        .card img {
+            width: 223px;
+            height: 310px;
+            transition: transform 0.3s ease;
+        }
+        .card:hover img {
+            transform: scale(1.1);
+            z-index: 10;
+        }
+        .card-name {
+            font-size: 14px;
+            margin-top: 5px;
+        }
+        #output {
+            margin-top: 30px;
+            white-space: pre-wrap;
+            background: #fff;
+            padding: 10px;
+            border: 1px solid #ccc;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .center-button {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        input[type="number"] {
+            font-size: 14px;
+            margin-left: 5px;
+        }
+        img { margin-top: 15px; }
+    </style>
+</head>
+<body>
+    <h1>Spider-Man – Card Gallery</h1>
+    <div class="gallery">
+        
+        <div class="card">
+            <label style="display:block;">
+                <div style="margin-bottom: 8px;">
+                    <input type="checkbox" class="card-checkbox" data-name="Anti-Venom, Horrifying Healer">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Anti-Venom+Horrifying+Healer&format=image" alt="Anti-Venom, Horrifying Healer">
+                <div class="card-name">Anti-Venom, Horrifying Healer (1)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Arachne, Psionic Weaver">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Arachne+Psionic+Weaver&format=image" alt="Arachne, Psionic Weaver">
+                <div class="card-name">Arachne, Psionic Weaver (2)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Aunt May">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Aunt+May&format=image" alt="Aunt May">
+                <div class="card-name">Aunt May (3)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="City Pigeon">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=City+Pigeon&format=image" alt="City Pigeon">
+                <div class="card-name">City Pigeon (4)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Costume Closet">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Costume+Closet&format=image" alt="Costume Closet">
+                <div class="card-name">Costume Closet (5)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Daily Bugle Reporters">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Daily+Bugle+Reporters&format=image" alt="Daily Bugle Reporters">
+                <div class="card-name">Daily Bugle Reporters (6)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Flash Thompson, Spider-Fan">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Flash+Thompson+Spider-Fan&format=image" alt="Flash Thompson, Spider-Fan">
+                <div class="card-name">Flash Thompson, Spider-Fan (7)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Friendly Neighborhood">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Friendly+Neighborhood&format=image" alt="Friendly Neighborhood">
+                <div class="card-name">Friendly Neighborhood (8)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Origin of Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Origin+of+Spider-Man&format=image" alt="Origin of Spider-Man">
+                <div class="card-name">Origin of Spider-Man (9)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Peter Parker // Amazing Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Peter+Parker+//+Amazing+Spider-Man&format=image" alt="Peter Parker // Amazing Spider-Man">
+                <div class="card-name">Peter Parker // Amazing Spider-Man (10)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Rent Is Due">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Rent+Is+Due&format=image" alt="Rent Is Due">
+                <div class="card-name">Rent Is Due (11)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Selfless Police Captain">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Selfless+Police+Captain&format=image" alt="Selfless Police Captain">
+                <div class="card-name">Selfless Police Captain (12)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Silver Sable, Mercenary Leader">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Silver+Sable+Mercenary+Leader&format=image" alt="Silver Sable, Mercenary Leader">
+                <div class="card-name">Silver Sable, Mercenary Leader (13)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spectacular Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spectacular+Spider-Man&format=image" alt="Spectacular Spider-Man">
+                <div class="card-name">Spectacular Spider-Man (14)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spectacular Tactics">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spectacular+Tactics&format=image" alt="Spectacular Tactics">
+                <div class="card-name">Spectacular Tactics (15)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Man, Web-Slinger">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Man+Web-Slinger&format=image" alt="Spider-Man, Web-Slinger">
+                <div class="card-name">Spider-Man, Web-Slinger (16)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-UK">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-UK&format=image" alt="Spider-UK">
+                <div class="card-name">Spider-UK (17)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Starling, Aerial Ally">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Starling+Aerial+Ally&format=image" alt="Starling, Aerial Ally">
+                <div class="card-name">Starling, Aerial Ally (18)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Sudden Strike">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Sudden+Strike&format=image" alt="Sudden Strike">
+                <div class="card-name">Sudden Strike (19)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Thwip!">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Thwip!&format=image" alt="Thwip!">
+                <div class="card-name">Thwip! (20)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Web Up">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Web+Up&format=image" alt="Web Up">
+                <div class="card-name">Web Up (21)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Web-Shooters">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Web-Shooters&format=image" alt="Web-Shooters">
+                <div class="card-name">Web-Shooters (22)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Wild Pack Squad">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Wild+Pack+Squad&format=image" alt="Wild Pack Squad">
+                <div class="card-name">Wild Pack Squad (23)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="With Great Power...">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=With+Great+Power...&format=image" alt="With Great Power...">
+                <div class="card-name">With Great Power... (24)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Amazing Acrobatics">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Amazing+Acrobatics&format=image" alt="Amazing Acrobatics">
+                <div class="card-name">Amazing Acrobatics (25)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Beetle, Legacy Criminal">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Beetle+Legacy+Criminal&format=image" alt="Beetle, Legacy Criminal">
+                <div class="card-name">Beetle, Legacy Criminal (26)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Chameleon, Master of Disguise">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Chameleon+Master+of+Disguise&format=image" alt="Chameleon, Master of Disguise">
+                <div class="card-name">Chameleon, Master of Disguise (27)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="The Clone Saga">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=The+Clone+Saga&format=image" alt="The Clone Saga">
+                <div class="card-name">The Clone Saga (28)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Doc Ock, Sinister Scientist">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Doc+Ock+Sinister+Scientist&format=image" alt="Doc Ock, Sinister Scientist">
+                <div class="card-name">Doc Ock, Sinister Scientist (29)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Doc Ock's Henchmen">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Doc+Ocks+Henchmen&format=image" alt="Doc Ock's Henchmen">
+                <div class="card-name">Doc Ock's Henchmen (30)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Flying Octobot">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Flying+Octobot&format=image" alt="Flying Octobot">
+                <div class="card-name">Flying Octobot (31)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Hide on the Ceiling">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Hide+on+the+Ceiling&format=image" alt="Hide on the Ceiling">
+                <div class="card-name">Hide on the Ceiling (32)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Hydro-Man, Fluid Felon">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Hydro-Man+Fluid+Felon&format=image" alt="Hydro-Man, Fluid Felon">
+                <div class="card-name">Hydro-Man, Fluid Felon (33)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Impostor Syndrome">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Impostor+Syndrome&format=image" alt="Impostor Syndrome">
+                <div class="card-name">Impostor Syndrome (34)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Lady Octopus, Inspired Inventor">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Lady+Octopus+Inspired+Inventor&format=image" alt="Lady Octopus, Inspired Inventor">
+                <div class="card-name">Lady Octopus, Inspired Inventor (35)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Madame Web, Clairvoyant">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Madame+Web+Clairvoyant&format=image" alt="Madame Web, Clairvoyant">
+                <div class="card-name">Madame Web, Clairvoyant (36)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Mysterio, Master of Illusion">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Mysterio+Master+of+Illusion&format=image" alt="Mysterio, Master of Illusion">
+                <div class="card-name">Mysterio, Master of Illusion (37)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Mysterio's Phantasm">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Mysterios+Phantasm&format=image" alt="Mysterio's Phantasm">
+                <div class="card-name">Mysterio's Phantasm (38)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Norman Osborn // Green Goblin">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Norman+Osborn+//+Green+Goblin&format=image" alt="Norman Osborn // Green Goblin">
+                <div class="card-name">Norman Osborn // Green Goblin (39)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Oscorp Research Team">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Oscorp+Research+Team&format=image" alt="Oscorp Research Team">
+                <div class="card-name">Oscorp Research Team (40)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Robotics Mastery">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Robotics+Mastery&format=image" alt="Robotics Mastery">
+                <div class="card-name">Robotics Mastery (41)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="School Daze">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=School+Daze&format=image" alt="School Daze">
+                <div class="card-name">School Daze (42)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Secret Identity">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Secret+Identity&format=image" alt="Secret Identity">
+                <div class="card-name">Secret Identity (43)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Byte, Web Warden">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Byte+Web+Warden&format=image" alt="Spider-Byte, Web Warden">
+                <div class="card-name">Spider-Byte, Web Warden (44)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Man No More">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Man+No+More&format=image" alt="Spider-Man No More">
+                <div class="card-name">Spider-Man No More (45)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Sense">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Sense&format=image" alt="Spider-Sense">
+                <div class="card-name">Spider-Sense (46)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Unstable Experiment">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Unstable+Experiment&format=image" alt="Unstable Experiment">
+                <div class="card-name">Unstable Experiment (47)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Whoosh!">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Whoosh!&format=image" alt="Whoosh!">
+                <div class="card-name">Whoosh! (48)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Agent Venom">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Agent+Venom&format=image" alt="Agent Venom">
+                <div class="card-name">Agent Venom (49)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Alien Symbiosis">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Alien+Symbiosis&format=image" alt="Alien Symbiosis">
+                <div class="card-name">Alien Symbiosis (50)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Behold the Sinister Six!">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Behold+the+Sinister+Six!&format=image" alt="Behold the Sinister Six!">
+                <div class="card-name">Behold the Sinister Six! (51)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Black Cat, Cunning Thief">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Black+Cat+Cunning+Thief&format=image" alt="Black Cat, Cunning Thief">
+                <div class="card-name">Black Cat, Cunning Thief (52)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Common Crook">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Common+Crook&format=image" alt="Common Crook">
+                <div class="card-name">Common Crook (53)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="The Death of Gwen Stacy">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=The+Death+of+Gwen+Stacy&format=image" alt="The Death of Gwen Stacy">
+                <div class="card-name">The Death of Gwen Stacy (54)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Eddie Brock // Venom, Lethal Protector">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Eddie+Brock+//+Venom+Lethal+Protector&format=image" alt="Eddie Brock // Venom, Lethal Protector">
+                <div class="card-name">Eddie Brock // Venom, Lethal Protector (55)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Gwenom, Remorseless">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Gwenom+Remorseless&format=image" alt="Gwenom, Remorseless">
+                <div class="card-name">Gwenom, Remorseless (56)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Inner Demons Gangsters">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Inner+Demons+Gangsters&format=image" alt="Inner Demons Gangsters">
+                <div class="card-name">Inner Demons Gangsters (57)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Merciless Enforcers">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Merciless+Enforcers&format=image" alt="Merciless Enforcers">
+                <div class="card-name">Merciless Enforcers (58)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Morlun, Devourer of Spiders">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Morlun+Devourer+of+Spiders&format=image" alt="Morlun, Devourer of Spiders">
+                <div class="card-name">Morlun, Devourer of Spiders (59)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Parker Luck">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Parker+Luck&format=image" alt="Parker Luck">
+                <div class="card-name">Parker Luck (60)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Prison Break">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Prison+Break&format=image" alt="Prison Break">
+                <div class="card-name">Prison Break (61)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Risky Research">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Risky+Research&format=image" alt="Risky Research">
+                <div class="card-name">Risky Research (62)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Sandman's Quicksand">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Sandmans+Quicksand&format=image" alt="Sandman's Quicksand">
+                <div class="card-name">Sandman's Quicksand (63)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Scorpion, Seething Striker">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Scorpion+Seething+Striker&format=image" alt="Scorpion, Seething Striker">
+                <div class="card-name">Scorpion, Seething Striker (64)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Scorpion's Sting">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Scorpions+Sting&format=image" alt="Scorpion's Sting">
+                <div class="card-name">Scorpion's Sting (65)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="The Soul Stone">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=The+Soul+Stone&format=image" alt="The Soul Stone">
+                <div class="card-name">The Soul Stone (66)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Man Noir">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Man+Noir&format=image" alt="Spider-Man Noir">
+                <div class="card-name">Spider-Man Noir (67)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="The Spot's Portal">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=The+Spots+Portal&format=image" alt="The Spot's Portal">
+                <div class="card-name">The Spot's Portal (68)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Swarm, Being of Bees">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Swarm+Being+of+Bees&format=image" alt="Swarm, Being of Bees">
+                <div class="card-name">Swarm, Being of Bees (69)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Tombstone, Career Criminal">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Tombstone+Career+Criminal&format=image" alt="Tombstone, Career Criminal">
+                <div class="card-name">Tombstone, Career Criminal (70)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Venom, Evil Unleashed">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Venom+Evil+Unleashed&format=image" alt="Venom, Evil Unleashed">
+                <div class="card-name">Venom, Evil Unleashed (71)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Venomized Cat">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Venomized+Cat&format=image" alt="Venomized Cat">
+                <div class="card-name">Venomized Cat (72)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Venom's Hunger">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Venoms+Hunger&format=image" alt="Venom's Hunger">
+                <div class="card-name">Venom's Hunger (73)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Villainous Wrath">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Villainous+Wrath&format=image" alt="Villainous Wrath">
+                <div class="card-name">Villainous Wrath (74)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Angry Rabble">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Angry+Rabble&format=image" alt="Angry Rabble">
+                <div class="card-name">Angry Rabble (75)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Electro, Assaulting Battery">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Electro+Assaulting+Battery&format=image" alt="Electro, Assaulting Battery">
+                <div class="card-name">Electro, Assaulting Battery (76)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Electro's Bolt">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Electros+Bolt&format=image" alt="Electro's Bolt">
+                <div class="card-name">Electro's Bolt (77)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Gwen Stacy // Ghost-Spider">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Gwen+Stacy+//+Ghost-Spider&format=image" alt="Gwen Stacy // Ghost-Spider">
+                <div class="card-name">Gwen Stacy // Ghost-Spider (78)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Heroes' Hangout">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Heroes+Hangout&format=image" alt="Heroes' Hangout">
+                <div class="card-name">Heroes' Hangout (79)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Hobgoblin, Mantled Marauder">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Hobgoblin+Mantled+Marauder&format=image" alt="Hobgoblin, Mantled Marauder">
+                <div class="card-name">Hobgoblin, Mantled Marauder (80)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="J. Jonah Jameson">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=J.+Jonah+Jameson&format=image" alt="J. Jonah Jameson">
+                <div class="card-name">J. Jonah Jameson (81)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Masked Meower">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Masked+Meower&format=image" alt="Masked Meower">
+                <div class="card-name">Masked Meower (82)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Maximum Carnage">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Maximum+Carnage&format=image" alt="Maximum Carnage">
+                <div class="card-name">Maximum Carnage (83)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Molten Man, Inferno Incarnate">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Molten+Man+Inferno+Incarnate&format=image" alt="Molten Man, Inferno Incarnate">
+                <div class="card-name">Molten Man, Inferno Incarnate (84)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Raging Goblinoids">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Raging+Goblinoids&format=image" alt="Raging Goblinoids">
+                <div class="card-name">Raging Goblinoids (85)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Romantic Rendezvous">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Romantic+Rendezvous&format=image" alt="Romantic Rendezvous">
+                <div class="card-name">Romantic Rendezvous (86)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Shadow of the Goblin">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Shadow+of+the+Goblin&format=image" alt="Shadow of the Goblin">
+                <div class="card-name">Shadow of the Goblin (87)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Shock">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Shock&format=image" alt="Shock">
+                <div class="card-name">Shock (88)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Shocker, Unshakable">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Shocker+Unshakable&format=image" alt="Shocker, Unshakable">
+                <div class="card-name">Shocker, Unshakable (89)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Gwen, Free Spirit">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Gwen+Free+Spirit&format=image" alt="Spider-Gwen, Free Spirit">
+                <div class="card-name">Spider-Gwen, Free Spirit (90)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Islanders">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Islanders&format=image" alt="Spider-Islanders">
+                <div class="card-name">Spider-Islanders (91)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Punk">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Punk&format=image" alt="Spider-Punk">
+                <div class="card-name">Spider-Punk (92)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Verse">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Verse&format=image" alt="Spider-Verse">
+                <div class="card-name">Spider-Verse (93)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spinneret and Spiderling">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spinneret+and+Spiderling&format=image" alt="Spinneret and Spiderling">
+                <div class="card-name">Spinneret and Spiderling (94)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Stegron the Dinosaur Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Stegron+the+Dinosaur+Man&format=image" alt="Stegron the Dinosaur Man">
+                <div class="card-name">Stegron the Dinosaur Man (95)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Superior Foes of Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Superior+Foes+of+Spider-Man&format=image" alt="Superior Foes of Spider-Man">
+                <div class="card-name">Superior Foes of Spider-Man (96)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Taxi Driver">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Taxi+Driver&format=image" alt="Taxi Driver">
+                <div class="card-name">Taxi Driver (97)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Wisecrack">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Wisecrack&format=image" alt="Wisecrack">
+                <div class="card-name">Wisecrack (98)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Damage Control Crew">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Damage+Control+Crew&format=image" alt="Damage Control Crew">
+                <div class="card-name">Damage Control Crew (99)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Ezekiel Sims, Spider-Totem">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Ezekiel+Sims+Spider-Totem&format=image" alt="Ezekiel Sims, Spider-Totem">
+                <div class="card-name">Ezekiel Sims, Spider-Totem (100)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Grow Extra Arms">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Grow+Extra+Arms&format=image" alt="Grow Extra Arms">
+                <div class="card-name">Grow Extra Arms (101)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Guy in the Chair">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Guy+in+the+Chair&format=image" alt="Guy in the Chair">
+                <div class="card-name">Guy in the Chair (102)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Kapow!">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Kapow!&format=image" alt="Kapow!">
+                <div class="card-name">Kapow! (103)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Kraven's Cats">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Kravens+Cats&format=image" alt="Kraven's Cats">
+                <div class="card-name">Kraven's Cats (104)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Kraven's Last Hunt">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Kravens+Last+Hunt&format=image" alt="Kraven's Last Hunt">
+                <div class="card-name">Kraven's Last Hunt (105)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Lizard, Connors's Curse">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Lizard+Connorss+Curse&format=image" alt="Lizard, Connors's Curse">
+                <div class="card-name">Lizard, Connors's Curse (106)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Lurking Lizards">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Lurking+Lizards&format=image" alt="Lurking Lizards">
+                <div class="card-name">Lurking Lizards (107)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Miles Morales // Ultimate Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Miles+Morales+//+Ultimate+Spider-Man&format=image" alt="Miles Morales // Ultimate Spider-Man">
+                <div class="card-name">Miles Morales // Ultimate Spider-Man (108)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Pictures of Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Pictures+of+Spider-Man&format=image" alt="Pictures of Spider-Man">
+                <div class="card-name">Pictures of Spider-Man (109)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Professional Wrestler">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Professional+Wrestler&format=image" alt="Professional Wrestler">
+                <div class="card-name">Professional Wrestler (110)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Radioactive Spider">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Radioactive+Spider&format=image" alt="Radioactive Spider">
+                <div class="card-name">Radioactive Spider (111)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Sandman, Shifting Scoundrel">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Sandman+Shifting+Scoundrel&format=image" alt="Sandman, Shifting Scoundrel">
+                <div class="card-name">Sandman, Shifting Scoundrel (112)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Scout the City">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Scout+the+City&format=image" alt="Scout the City">
+                <div class="card-name">Scout the City (113)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Ham, Peter Porker">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Ham+Peter+Porker&format=image" alt="Spider-Ham, Peter Porker">
+                <div class="card-name">Spider-Ham, Peter Porker (114)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Man, Brooklyn Visionary">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Man+Brooklyn+Visionary&format=image" alt="Spider-Man, Brooklyn Visionary">
+                <div class="card-name">Spider-Man, Brooklyn Visionary (115)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Rex, Daring Dino">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Rex+Daring+Dino&format=image" alt="Spider-Rex, Daring Dino">
+                <div class="card-name">Spider-Rex, Daring Dino (116)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spiders-Man, Heroic Horde">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spiders-Man+Heroic+Horde&format=image" alt="Spiders-Man, Heroic Horde">
+                <div class="card-name">Spiders-Man, Heroic Horde (117)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Strength of Will">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Strength+of+Will&format=image" alt="Strength of Will">
+                <div class="card-name">Strength of Will (118)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Supportive Parents">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Supportive+Parents&format=image" alt="Supportive Parents">
+                <div class="card-name">Supportive Parents (119)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Terrific Team-Up">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Terrific+Team-Up&format=image" alt="Terrific Team-Up">
+                <div class="card-name">Terrific Team-Up (120)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Wall Crawl">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Wall+Crawl&format=image" alt="Wall Crawl">
+                <div class="card-name">Wall Crawl (121)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Web of Life and Destiny">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Web+of+Life+and+Destiny&format=image" alt="Web of Life and Destiny">
+                <div class="card-name">Web of Life and Destiny (122)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Araña, Heart of the Spider">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Araña+Heart+of+the+Spider&format=image" alt="Araña, Heart of the Spider">
+                <div class="card-name">Araña, Heart of the Spider (123)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Biorganic Carapace">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Biorganic+Carapace&format=image" alt="Biorganic Carapace">
+                <div class="card-name">Biorganic Carapace (124)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Carnage, Crimson Chaos">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Carnage+Crimson+Chaos&format=image" alt="Carnage, Crimson Chaos">
+                <div class="card-name">Carnage, Crimson Chaos (125)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Cheering Crowd">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Cheering+Crowd&format=image" alt="Cheering Crowd">
+                <div class="card-name">Cheering Crowd (126)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Cosmic Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Cosmic+Spider-Man&format=image" alt="Cosmic Spider-Man">
+                <div class="card-name">Cosmic Spider-Man (127)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Doctor Octopus, Master Planner">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Doctor+Octopus+Master+Planner&format=image" alt="Doctor Octopus, Master Planner">
+                <div class="card-name">Doctor Octopus, Master Planner (128)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Gallant Citizen">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Gallant+Citizen&format=image" alt="Gallant Citizen">
+                <div class="card-name">Gallant Citizen (129)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Green Goblin, Revenant">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Green+Goblin+Revenant&format=image" alt="Green Goblin, Revenant">
+                <div class="card-name">Green Goblin, Revenant (130)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Jackal, Genius Geneticist">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Jackal+Genius+Geneticist&format=image" alt="Jackal, Genius Geneticist">
+                <div class="card-name">Jackal, Genius Geneticist (131)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Kraven, Proud Predator">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Kraven+Proud+Predator&format=image" alt="Kraven, Proud Predator">
+                <div class="card-name">Kraven, Proud Predator (132)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Kraven the Hunter">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Kraven+the+Hunter&format=image" alt="Kraven the Hunter">
+                <div class="card-name">Kraven the Hunter (133)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Mary Jane Watson">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Mary+Jane+Watson&format=image" alt="Mary Jane Watson">
+                <div class="card-name">Mary Jane Watson (134)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Mister Negative">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Mister+Negative&format=image" alt="Mister Negative">
+                <div class="card-name">Mister Negative (135)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Mob Lookout">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Mob+Lookout&format=image" alt="Mob Lookout">
+                <div class="card-name">Mob Lookout (136)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Morbius the Living Vampire">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Morbius+the+Living+Vampire&format=image" alt="Morbius the Living Vampire">
+                <div class="card-name">Morbius the Living Vampire (137)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Prowler, Clawed Thief">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Prowler+Clawed+Thief&format=image" alt="Prowler, Clawed Thief">
+                <div class="card-name">Prowler, Clawed Thief (138)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Pumpkin Bombardment">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Pumpkin+Bombardment&format=image" alt="Pumpkin Bombardment">
+                <div class="card-name">Pumpkin Bombardment (139)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Rhino, Barreling Brute">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Rhino+Barreling+Brute&format=image" alt="Rhino, Barreling Brute">
+                <div class="card-name">Rhino, Barreling Brute (140)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Rhino's Rampage">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Rhinos+Rampage&format=image" alt="Rhino's Rampage">
+                <div class="card-name">Rhino's Rampage (141)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Scarlet Spider, Ben Reilly">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Scarlet+Spider+Ben+Reilly&format=image" alt="Scarlet Spider, Ben Reilly">
+                <div class="card-name">Scarlet Spider, Ben Reilly (142)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Scarlet Spider, Kaine">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Scarlet+Spider+Kaine&format=image" alt="Scarlet Spider, Kaine">
+                <div class="card-name">Scarlet Spider, Kaine (143)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Shriek, Treblemaker">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Shriek+Treblemaker&format=image" alt="Shriek, Treblemaker">
+                <div class="card-name">Shriek, Treblemaker (144)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Silk, Web Weaver">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Silk+Web+Weaver&format=image" alt="Silk, Web Weaver">
+                <div class="card-name">Silk, Web Weaver (145)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Skyward Spider">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Skyward+Spider&format=image" alt="Skyward Spider">
+                <div class="card-name">Skyward Spider (146)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="SP//dr, Piloted by Peni">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=SP//dr+Piloted+by+Peni&format=image" alt="SP//dr, Piloted by Peni">
+                <div class="card-name">SP//dr, Piloted by Peni (147)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider Manifestation">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider+Manifestation&format=image" alt="Spider Manifestation">
+                <div class="card-name">Spider Manifestation (148)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Girl, Legacy Hero">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Girl+Legacy+Hero&format=image" alt="Spider-Girl, Legacy Hero">
+                <div class="card-name">Spider-Girl, Legacy Hero (149)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Man 2099">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Man+2099&format=image" alt="Spider-Man 2099">
+                <div class="card-name">Spider-Man 2099 (150)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Man India">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Man+India&format=image" alt="Spider-Man India">
+                <div class="card-name">Spider-Man India (151)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Woman, Stunning Savior">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Woman+Stunning+Savior&format=image" alt="Spider-Woman, Stunning Savior">
+                <div class="card-name">Spider-Woman, Stunning Savior (152)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="The Spot, Living Portal">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=The+Spot+Living+Portal&format=image" alt="The Spot, Living Portal">
+                <div class="card-name">The Spot, Living Portal (153)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Sun-Spider, Nimble Webber">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Sun-Spider+Nimble+Webber&format=image" alt="Sun-Spider, Nimble Webber">
+                <div class="card-name">Sun-Spider, Nimble Webber (154)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Superior Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Superior+Spider-Man&format=image" alt="Superior Spider-Man">
+                <div class="card-name">Superior Spider-Man (155)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Symbiote Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Symbiote+Spider-Man&format=image" alt="Symbiote Spider-Man">
+                <div class="card-name">Symbiote Spider-Man (156)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Ultimate Green Goblin">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Ultimate+Green+Goblin&format=image" alt="Ultimate Green Goblin">
+                <div class="card-name">Ultimate Green Goblin (157)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Vulture, Scheming Scavenger">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Vulture+Scheming+Scavenger&format=image" alt="Vulture, Scheming Scavenger">
+                <div class="card-name">Vulture, Scheming Scavenger (158)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Web-Warriors">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Web-Warriors&format=image" alt="Web-Warriors">
+                <div class="card-name">Web-Warriors (159)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Wraith, Vicious Vigilante">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Wraith+Vicious+Vigilante&format=image" alt="Wraith, Vicious Vigilante">
+                <div class="card-name">Wraith, Vicious Vigilante (160)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Bagel and Schmear">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Bagel+and+Schmear&format=image" alt="Bagel and Schmear">
+                <div class="card-name">Bagel and Schmear (161)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Doc Ock's Tentacles">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Doc+Ocks+Tentacles&format=image" alt="Doc Ock's Tentacles">
+                <div class="card-name">Doc Ock's Tentacles (162)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Eerie Gravestone">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Eerie+Gravestone&format=image" alt="Eerie Gravestone">
+                <div class="card-name">Eerie Gravestone (163)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Hot Dog Cart">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Hot+Dog+Cart&format=image" alt="Hot Dog Cart">
+                <div class="card-name">Hot Dog Cart (164)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Interdimensional Web Watch">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Interdimensional+Web+Watch&format=image" alt="Interdimensional Web Watch">
+                <div class="card-name">Interdimensional Web Watch (165)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Iron Spider, Stark Upgrade">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Iron+Spider+Stark+Upgrade&format=image" alt="Iron Spider, Stark Upgrade">
+                <div class="card-name">Iron Spider, Stark Upgrade (166)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Living Brain, Mechanical Marvel">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Living+Brain+Mechanical+Marvel&format=image" alt="Living Brain, Mechanical Marvel">
+                <div class="card-name">Living Brain, Mechanical Marvel (167)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Mechanical Mobster">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Mechanical+Mobster&format=image" alt="Mechanical Mobster">
+                <div class="card-name">Mechanical Mobster (168)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="News Helicopter">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=News+Helicopter&format=image" alt="News Helicopter">
+                <div class="card-name">News Helicopter (169)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Passenger Ferry">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Passenger+Ferry&format=image" alt="Passenger Ferry">
+                <div class="card-name">Passenger Ferry (170)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Peter Parker's Camera">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Peter+Parkers+Camera&format=image" alt="Peter Parker's Camera">
+                <div class="card-name">Peter Parker's Camera (171)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Rocket-Powered Goblin Glider">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Rocket-Powered+Goblin+Glider&format=image" alt="Rocket-Powered Goblin Glider">
+                <div class="card-name">Rocket-Powered Goblin Glider (172)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Bot">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Bot&format=image" alt="Spider-Bot">
+                <div class="card-name">Spider-Bot (173)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Mobile">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Mobile&format=image" alt="Spider-Mobile">
+                <div class="card-name">Spider-Mobile (174)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Slayer, Hatred Honed">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Slayer+Hatred+Honed&format=image" alt="Spider-Slayer, Hatred Honed">
+                <div class="card-name">Spider-Slayer, Hatred Honed (175)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Suit">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Suit&format=image" alt="Spider-Suit">
+                <div class="card-name">Spider-Suit (176)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Steel Wrecking Ball">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Steel+Wrecking+Ball&format=image" alt="Steel Wrecking Ball">
+                <div class="card-name">Steel Wrecking Ball (177)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Subway Train">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Subway+Train&format=image" alt="Subway Train">
+                <div class="card-name">Subway Train (178)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Daily Bugle Building">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Daily+Bugle+Building&format=image" alt="Daily Bugle Building">
+                <div class="card-name">Daily Bugle Building (179)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Multiversal Passage">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Multiversal+Passage&format=image" alt="Multiversal Passage">
+                <div class="card-name">Multiversal Passage (180)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Ominous Asylum">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Ominous+Asylum&format=image" alt="Ominous Asylum">
+                <div class="card-name">Ominous Asylum (181)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Oscorp Industries">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Oscorp+Industries&format=image" alt="Oscorp Industries">
+                <div class="card-name">Oscorp Industries (182)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Savage Mansion">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Savage+Mansion&format=image" alt="Savage Mansion">
+                <div class="card-name">Savage Mansion (183)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Sinister Hideout">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Sinister+Hideout&format=image" alt="Sinister Hideout">
+                <div class="card-name">Sinister Hideout (184)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Suburban Sanctuary">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Suburban+Sanctuary&format=image" alt="Suburban Sanctuary">
+                <div class="card-name">Suburban Sanctuary (185)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="University Campus">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=University+Campus&format=image" alt="University Campus">
+                <div class="card-name">University Campus (186)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Urban Retreat">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Urban+Retreat&format=image" alt="Urban Retreat">
+                <div class="card-name">Urban Retreat (187)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Vibrant Cityscape">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Vibrant+Cityscape&format=image" alt="Vibrant Cityscape">
+                <div class="card-name">Vibrant Cityscape (188)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Plains">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Plains&format=image" alt="Plains">
+                <div class="card-name">Plains (189)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Island">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Island&format=image" alt="Island">
+                <div class="card-name">Island (190)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Swamp">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Swamp&format=image" alt="Swamp">
+                <div class="card-name">Swamp (191)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Mountain">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Mountain&format=image" alt="Mountain">
+                <div class="card-name">Mountain (192)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Forest">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Forest&format=image" alt="Forest">
+                <div class="card-name">Forest (193)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Plains">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Plains&format=image" alt="Plains">
+                <div class="card-name">Plains (194)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Island">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Island&format=image" alt="Island">
+                <div class="card-name">Island (195)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Swamp">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Swamp&format=image" alt="Swamp">
+                <div class="card-name">Swamp (196)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Mountain">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Mountain&format=image" alt="Mountain">
+                <div class="card-name">Mountain (197)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Forest">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Forest&format=image" alt="Forest">
+                <div class="card-name">Forest (198)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="SP//dr, Piloted by Peni">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=SP//dr+Piloted+by+Peni&format=image" alt="SP//dr, Piloted by Peni">
+                <div class="card-name">SP//dr, Piloted by Peni (199)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Miles Morales // Ultimate Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Miles+Morales+//+Ultimate+Spider-Man&format=image" alt="Miles Morales // Ultimate Spider-Man">
+                <div class="card-name">Miles Morales // Ultimate Spider-Man (200)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Ham, Peter Porker">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Ham+Peter+Porker&format=image" alt="Spider-Ham, Peter Porker">
+                <div class="card-name">Spider-Ham, Peter Porker (201)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Gwen Stacy // Ghost-Spider">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Gwen+Stacy+//+Ghost-Spider&format=image" alt="Gwen Stacy // Ghost-Spider">
+                <div class="card-name">Gwen Stacy // Ghost-Spider (202)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Web-Warriors">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Web-Warriors&format=image" alt="Web-Warriors">
+                <div class="card-name">Web-Warriors (203)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Man Noir">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Man+Noir&format=image" alt="Spider-Man Noir">
+                <div class="card-name">Spider-Man Noir (204)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Man 2099">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Man+2099&format=image" alt="Spider-Man 2099">
+                <div class="card-name">Spider-Man 2099 (205)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Multiversal Passage">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Multiversal+Passage&format=image" alt="Multiversal Passage">
+                <div class="card-name">Multiversal Passage (206)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Punk">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Punk&format=image" alt="Spider-Punk">
+                <div class="card-name">Spider-Punk (207)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Peter Parker // Amazing Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Peter+Parker+//+Amazing+Spider-Man&format=image" alt="Peter Parker // Amazing Spider-Man">
+                <div class="card-name">Peter Parker // Amazing Spider-Man (208)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Gwen Stacy // Ghost-Spider">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Gwen+Stacy+//+Ghost-Spider&format=image" alt="Gwen Stacy // Ghost-Spider">
+                <div class="card-name">Gwen Stacy // Ghost-Spider (209)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Punk">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Punk&format=image" alt="Spider-Punk">
+                <div class="card-name">Spider-Punk (210)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Miles Morales // Ultimate Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Miles+Morales+//+Ultimate+Spider-Man&format=image" alt="Miles Morales // Ultimate Spider-Man">
+                <div class="card-name">Miles Morales // Ultimate Spider-Man (211)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Radioactive Spider">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Radioactive+Spider&format=image" alt="Radioactive Spider">
+                <div class="card-name">Radioactive Spider (212)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Araña, Heart of the Spider">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Araña+Heart+of+the+Spider&format=image" alt="Araña, Heart of the Spider">
+                <div class="card-name">Araña, Heart of the Spider (213)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Scarlet Spider, Ben Reilly">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Scarlet+Spider+Ben+Reilly&format=image" alt="Scarlet Spider, Ben Reilly">
+                <div class="card-name">Scarlet Spider, Ben Reilly (214)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Silk, Web Weaver">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Silk+Web+Weaver&format=image" alt="Silk, Web Weaver">
+                <div class="card-name">Silk, Web Weaver (215)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Man 2099">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Man+2099&format=image" alt="Spider-Man 2099">
+                <div class="card-name">Spider-Man 2099 (216)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Symbiote Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Symbiote+Spider-Man&format=image" alt="Symbiote Spider-Man">
+                <div class="card-name">Symbiote Spider-Man (217)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Origin of Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Origin+of+Spider-Man&format=image" alt="Origin of Spider-Man">
+                <div class="card-name">Origin of Spider-Man (218)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="The Clone Saga">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=The+Clone+Saga&format=image" alt="The Clone Saga">
+                <div class="card-name">The Clone Saga (219)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Norman Osborn // Green Goblin">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Norman+Osborn+//+Green+Goblin&format=image" alt="Norman Osborn // Green Goblin">
+                <div class="card-name">Norman Osborn // Green Goblin (220)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Behold the Sinister Six!">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Behold+the+Sinister+Six!&format=image" alt="Behold the Sinister Six!">
+                <div class="card-name">Behold the Sinister Six! (221)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Black Cat, Cunning Thief">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Black+Cat+Cunning+Thief&format=image" alt="Black Cat, Cunning Thief">
+                <div class="card-name">Black Cat, Cunning Thief (222)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="The Death of Gwen Stacy">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=The+Death+of+Gwen+Stacy&format=image" alt="The Death of Gwen Stacy">
+                <div class="card-name">The Death of Gwen Stacy (223)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Eddie Brock // Venom, Lethal Protector">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Eddie+Brock+//+Venom+Lethal+Protector&format=image" alt="Eddie Brock // Venom, Lethal Protector">
+                <div class="card-name">Eddie Brock // Venom, Lethal Protector (224)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Maximum Carnage">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Maximum+Carnage&format=image" alt="Maximum Carnage">
+                <div class="card-name">Maximum Carnage (225)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Kraven's Last Hunt">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Kravens+Last+Hunt&format=image" alt="Kraven's Last Hunt">
+                <div class="card-name">Kraven's Last Hunt (226)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Carnage, Crimson Chaos">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Carnage+Crimson+Chaos&format=image" alt="Carnage, Crimson Chaos">
+                <div class="card-name">Carnage, Crimson Chaos (227)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Doctor Octopus, Master Planner">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Doctor+Octopus+Master+Planner&format=image" alt="Doctor Octopus, Master Planner">
+                <div class="card-name">Doctor Octopus, Master Planner (228)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Mary Jane Watson">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Mary+Jane+Watson&format=image" alt="Mary Jane Watson">
+                <div class="card-name">Mary Jane Watson (229)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Woman, Stunning Savior">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Woman+Stunning+Savior&format=image" alt="Spider-Woman, Stunning Savior">
+                <div class="card-name">Spider-Woman, Stunning Savior (230)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="The Spot, Living Portal">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=The+Spot+Living+Portal&format=image" alt="The Spot, Living Portal">
+                <div class="card-name">The Spot, Living Portal (231)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Peter Parker // Amazing Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Peter+Parker+//+Amazing+Spider-Man&format=image" alt="Peter Parker // Amazing Spider-Man">
+                <div class="card-name">Peter Parker // Amazing Spider-Man (232)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Eddie Brock // Venom, Lethal Protector">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Eddie+Brock+//+Venom+Lethal+Protector&format=image" alt="Eddie Brock // Venom, Lethal Protector">
+                <div class="card-name">Eddie Brock // Venom, Lethal Protector (233)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Miles Morales // Ultimate Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Miles+Morales+//+Ultimate+Spider-Man&format=image" alt="Miles Morales // Ultimate Spider-Man">
+                <div class="card-name">Miles Morales // Ultimate Spider-Man (234)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spectacular Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spectacular+Spider-Man&format=image" alt="Spectacular Spider-Man">
+                <div class="card-name">Spectacular Spider-Man (235)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spectacular Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spectacular+Spider-Man&format=image" alt="Spectacular Spider-Man">
+                <div class="card-name">Spectacular Spider-Man (236)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spectacular Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spectacular+Spider-Man&format=image" alt="Spectacular Spider-Man">
+                <div class="card-name">Spectacular Spider-Man (237)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spectacular Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spectacular+Spider-Man&format=image" alt="Spectacular Spider-Man">
+                <div class="card-name">Spectacular Spider-Man (238)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spectacular Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spectacular+Spider-Man&format=image" alt="Spectacular Spider-Man">
+                <div class="card-name">Spectacular Spider-Man (239)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spectacular Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spectacular+Spider-Man&format=image" alt="Spectacular Spider-Man">
+                <div class="card-name">Spectacular Spider-Man (240)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spectacular Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spectacular+Spider-Man&format=image" alt="Spectacular Spider-Man">
+                <div class="card-name">Spectacular Spider-Man (241)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="The Soul Stone">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=The+Soul+Stone&format=image" alt="The Soul Stone">
+                <div class="card-name">The Soul Stone (242)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="The Soul Stone">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=The+Soul+Stone&format=image" alt="The Soul Stone">
+                <div class="card-name">The Soul Stone (243)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Anti-Venom, Horrifying Healer">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Anti-Venom+Horrifying+Healer&format=image" alt="Anti-Venom, Horrifying Healer">
+                <div class="card-name">Anti-Venom, Horrifying Healer (244)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Arachne, Psionic Weaver">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Arachne+Psionic+Weaver&format=image" alt="Arachne, Psionic Weaver">
+                <div class="card-name">Arachne, Psionic Weaver (245)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Friendly Neighborhood">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Friendly+Neighborhood&format=image" alt="Friendly Neighborhood">
+                <div class="card-name">Friendly Neighborhood (246)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Rent Is Due">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Rent+Is+Due&format=image" alt="Rent Is Due">
+                <div class="card-name">Rent Is Due (247)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="With Great Power...">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=With+Great+Power...&format=image" alt="With Great Power...">
+                <div class="card-name">With Great Power... (248)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Hide on the Ceiling">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Hide+on+the+Ceiling&format=image" alt="Hide on the Ceiling">
+                <div class="card-name">Hide on the Ceiling (249)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Hydro-Man, Fluid Felon">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Hydro-Man+Fluid+Felon&format=image" alt="Hydro-Man, Fluid Felon">
+                <div class="card-name">Hydro-Man, Fluid Felon (250)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Impostor Syndrome">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Impostor+Syndrome&format=image" alt="Impostor Syndrome">
+                <div class="card-name">Impostor Syndrome (251)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Lady Octopus, Inspired Inventor">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Lady+Octopus+Inspired+Inventor&format=image" alt="Lady Octopus, Inspired Inventor">
+                <div class="card-name">Lady Octopus, Inspired Inventor (252)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Mysterio, Master of Illusion">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Mysterio+Master+of+Illusion&format=image" alt="Mysterio, Master of Illusion">
+                <div class="card-name">Mysterio, Master of Illusion (253)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Sense">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Sense&format=image" alt="Spider-Sense">
+                <div class="card-name">Spider-Sense (254)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Agent Venom">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Agent+Venom&format=image" alt="Agent Venom">
+                <div class="card-name">Agent Venom (255)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Gwenom, Remorseless">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Gwenom+Remorseless&format=image" alt="Gwenom, Remorseless">
+                <div class="card-name">Gwenom, Remorseless (256)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Morlun, Devourer of Spiders">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Morlun+Devourer+of+Spiders&format=image" alt="Morlun, Devourer of Spiders">
+                <div class="card-name">Morlun, Devourer of Spiders (257)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Parker Luck">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Parker+Luck&format=image" alt="Parker Luck">
+                <div class="card-name">Parker Luck (258)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Villainous Wrath">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Villainous+Wrath&format=image" alt="Villainous Wrath">
+                <div class="card-name">Villainous Wrath (259)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Electro, Assaulting Battery">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Electro+Assaulting+Battery&format=image" alt="Electro, Assaulting Battery">
+                <div class="card-name">Electro, Assaulting Battery (260)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="J. Jonah Jameson">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=J.+Jonah+Jameson&format=image" alt="J. Jonah Jameson">
+                <div class="card-name">J. Jonah Jameson (261)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Shadow of the Goblin">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Shadow+of+the+Goblin&format=image" alt="Shadow of the Goblin">
+                <div class="card-name">Shadow of the Goblin (262)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Verse">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Verse&format=image" alt="Spider-Verse">
+                <div class="card-name">Spider-Verse (263)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spinneret and Spiderling">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spinneret+and+Spiderling&format=image" alt="Spinneret and Spiderling">
+                <div class="card-name">Spinneret and Spiderling (264)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Lizard, Connors's Curse">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Lizard+Connorss+Curse&format=image" alt="Lizard, Connors's Curse">
+                <div class="card-name">Lizard, Connors's Curse (265)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Sandman, Shifting Scoundrel">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Sandman+Shifting+Scoundrel&format=image" alt="Sandman, Shifting Scoundrel">
+                <div class="card-name">Sandman, Shifting Scoundrel (266)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Strength of Will">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Strength+of+Will&format=image" alt="Strength of Will">
+                <div class="card-name">Strength of Will (267)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Web of Life and Destiny">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Web+of+Life+and+Destiny&format=image" alt="Web of Life and Destiny">
+                <div class="card-name">Web of Life and Destiny (268)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Biorganic Carapace">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Biorganic+Carapace&format=image" alt="Biorganic Carapace">
+                <div class="card-name">Biorganic Carapace (269)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Cheering Crowd">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Cheering+Crowd&format=image" alt="Cheering Crowd">
+                <div class="card-name">Cheering Crowd (270)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Cosmic Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Cosmic+Spider-Man&format=image" alt="Cosmic Spider-Man">
+                <div class="card-name">Cosmic Spider-Man (271)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Jackal, Genius Geneticist">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Jackal+Genius+Geneticist&format=image" alt="Jackal, Genius Geneticist">
+                <div class="card-name">Jackal, Genius Geneticist (272)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Kraven the Hunter">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Kraven+the+Hunter&format=image" alt="Kraven the Hunter">
+                <div class="card-name">Kraven the Hunter (273)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Mister Negative">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Mister+Negative&format=image" alt="Mister Negative">
+                <div class="card-name">Mister Negative (274)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Superior Spider-Man">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Superior+Spider-Man&format=image" alt="Superior Spider-Man">
+                <div class="card-name">Superior Spider-Man (275)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Ultimate Green Goblin">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Ultimate+Green+Goblin&format=image" alt="Ultimate Green Goblin">
+                <div class="card-name">Ultimate Green Goblin (276)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Doc Ock's Tentacles">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Doc+Ocks+Tentacles&format=image" alt="Doc Ock's Tentacles">
+                <div class="card-name">Doc Ock's Tentacles (277)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Interdimensional Web Watch">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Interdimensional+Web+Watch&format=image" alt="Interdimensional Web Watch">
+                <div class="card-name">Interdimensional Web Watch (278)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Iron Spider, Stark Upgrade">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Iron+Spider+Stark+Upgrade&format=image" alt="Iron Spider, Stark Upgrade">
+                <div class="card-name">Iron Spider, Stark Upgrade (279)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Peter Parker's Camera">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Peter+Parkers+Camera&format=image" alt="Peter Parker's Camera">
+                <div class="card-name">Peter Parker's Camera (280)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Rocket-Powered Goblin Glider">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Rocket-Powered+Goblin+Glider&format=image" alt="Rocket-Powered Goblin Glider">
+                <div class="card-name">Rocket-Powered Goblin Glider (281)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Oscorp Industries">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Oscorp+Industries&format=image" alt="Oscorp Industries">
+                <div class="card-name">Oscorp Industries (282)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Urban Retreat">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Urban+Retreat&format=image" alt="Urban Retreat">
+                <div class="card-name">Urban Retreat (283)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Spider-Sense">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Spider-Sense&format=image" alt="Spider-Sense">
+                <div class="card-name">Spider-Sense (284)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Radioactive Spider">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Radioactive+Spider&format=image" alt="Radioactive Spider">
+                <div class="card-name">Radioactive Spider (285)</div>
+            </label>
+        </div>
+    
+        <div class="card">
+            <label style="display:block;">
+                <div>
+                    <input type="checkbox" class="card-checkbox" data-name="Gwenom, Remorseless">
+                    <input type="number" min="1" value="1" class="card-qty" style="width: 40px;" disabled>
+                </div>
+                <img src="https://api.scryfall.com/cards/named?exact=Gwenom+Remorseless&format=image" alt="Gwenom, Remorseless">
+                <div class="card-name">Gwenom, Remorseless (286)</div>
+            </label>
+        </div>
+    
+    </div>
+
+    <button class="center-button" onclick="generateList()">Generuj listę zaznaczonych kart</button>
+    <button class="center-button" onclick="copyToClipboard()">📋 Skopiuj do schowka</button>
+    <button class="center-button" onclick="downloadList()">💾 Zapisz jako TXT</button>
+
+    <div id="output"></div>
+
+    <script>
+        document.querySelectorAll('.card-checkbox').forEach(cb => {
+            cb.addEventListener('change', function() {
+                const qtyInput = this.parentElement.querySelector('.card-qty');
+                qtyInput.disabled = !this.checked;
+            });
+        });
+
+        function generateList() {
+            const selected = document.querySelectorAll('.card-checkbox:checked');
+            const lines = Array.from(selected).map(cb => {
+                const qty = cb.parentElement.querySelector('.card-qty').value || "1";
+                const name = cb.getAttribute("data-name");
+                return qty + " " + name;
+            });
+            document.getElementById('output').textContent = lines.join('\n');
+        }
+
+        function copyToClipboard() {
+            const text = document.getElementById('output').textContent;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Skopiowano do schowka!");
+            }).catch(err => {
+                alert("Błąd kopiowania: " + err);
+            });
+        }
+
+        function downloadList() {
+            const text = document.getElementById('output').textContent;
+            const blob = new Blob([text], { type: 'text/plain' });
+            const link = document.createElement('a');
+            link.href = URL.createObjectURL(blob);
+            link.download = 'selected_cards.txt';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+    </script>
+</body>
+</html>
