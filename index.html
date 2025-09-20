@@ -3206,6 +3206,7 @@
     <button class="center-button" onclick="generateList()">Generuj listę zaznaczonych kart</button>
     <button class="center-button" onclick="copyToClipboard()">📋 Skopiuj do schowka</button>
     <button class="center-button" onclick="downloadList()">💾 Zapisz jako TXT</button>
+<button class="center-button" onclick="clearSelections()">❌ Wyczyść zaznaczenia</button>
 
     <div id="output"></div>
 
@@ -3247,5 +3248,50 @@
             document.body.removeChild(link);
         }
     </script>
+
+<script>
+    document.querySelectorAll('.card-checkbox').forEach(cb => {
+        const cardName = cb.getAttribute("data-name");
+
+        if (localStorage.getItem(cardName)) {
+            cb.checked = true;
+            const qtyInput = cb.parentElement.querySelector('.card-qty');
+            qtyInput.disabled = false;
+            qtyInput.value = localStorage.getItem(cardName);
+        }
+
+        cb.addEventListener('change', function () {
+            const qtyInput = cb.parentElement.querySelector('.card-qty');
+            if (cb.checked) {
+                qtyInput.disabled = false;
+                localStorage.setItem(cardName, qtyInput.value);
+            } else {
+                qtyInput.disabled = true;
+                localStorage.removeItem(cardName);
+            }
+        });
+
+        const qtyInput = cb.parentElement.querySelector('.card-qty');
+        qtyInput.addEventListener('input', function () {
+            if (cb.checked) {
+                localStorage.setItem(cardName, qtyInput.value);
+            }
+        });
+    });
+
+    function clearSelections() {
+        if (confirm("Czy na pewno chcesz usunąć wszystkie zaznaczenia i liczby?")) {
+            document.querySelectorAll('.card-checkbox').forEach(cb => {
+                const cardName = cb.getAttribute("data-name");
+                cb.checked = false;
+                cb.parentElement.querySelector('.card-qty').value = 1;
+                cb.parentElement.querySelector('.card-qty').disabled = true;
+                localStorage.removeItem(cardName);
+            });
+            document.getElementById('output').textContent = "";
+        }
+    }
+</script>
+
 </body>
 </html>
